@@ -1,8 +1,8 @@
 # RaspiKinect
 
-[IN DEVELOPMENT]
+
 This repository holds the code for the EE491 - Project class "Full 3D Model Reconstruction using Multiple Kinects"
-Project is still under development. The purpose of this repository is to show progress of the project.
+The purpose of this repository is to show progress of the project.
 
 To drive Multiple Kinects, Raspberry Pi's are used for each Kinect. Each Raspberry Pi is accessed using SSH. Currently
 only Kinect v1 is supported. The data acquired by Raspberry Pi is then converted into Point Cloud using Point Cloud Library at the server.
