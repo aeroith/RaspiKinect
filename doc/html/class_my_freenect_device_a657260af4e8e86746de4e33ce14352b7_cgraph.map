@@ -1,0 +1,5 @@
+<map id="MyFreenectDevice::getDepth" name="MyFreenectDevice::getDepth">
+<area shape="rect" id="node2" href="$class_mutex.html#ad91be808bf0a60a16f10b897ec246d3a" title="Mutex::lock" alt="" coords="484,5,575,32"/>
+<area shape="rect" id="node3" href="$class_mutex.html#a546a5b797ba29959357586aa2b3740a8" title="Mutex::unlock" alt="" coords="477,68,581,95"/>
+<area shape="rect" id="node4" href="$class_my_freenect_device.html#afead2e01130913c50376e3439036aed8" title="MyFreenectDevice::getRGB" alt="" coords="244,31,429,57"/>
+</map>

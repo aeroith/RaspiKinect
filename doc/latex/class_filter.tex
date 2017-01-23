@@ -1,0 +1,207 @@
+\hypertarget{class_filter}{}\section{Filter Class Reference}
+\label{class_filter}\index{Filter@{Filter}}
+
+
+{\ttfamily \#include $<$filter.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \hyperlink{class_filter_aeb13a40d687d3ceec3c01510b49855ac}{remove\+Na\+N\+Points} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&cloud)
+\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \hyperlink{class_filter_a603911357de3e32f0c814c9a9689d406}{pass\+Through} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&cloud, float min\+\_\+val, float max\+\_\+val)
+\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \hyperlink{class_filter_a155048b6fa5dc91ad788250657a54df4}{voxel\+Grid} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&cloud, float leaf\+\_\+size)
+\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \hyperlink{class_filter_ad73a60fc35775b86e962f7dcbfc1ef72}{statistical\+Outlier\+Removal} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&input, float mean, float std\+\_\+dev)
+\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \hyperlink{class_filter_a9137377eaf1376a85a48d30b9caa7c7e}{radius\+Outline\+Removal} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&cloud, float radius, int neighbors)
+\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \hyperlink{class_filter_a1cab4817dc8a590cc64e11b1e9d24d0b}{remove\+Na\+N\+Normals} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&cloud)
+\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \hyperlink{class_filter_aee0b09a09d224bd602892fcbf372d32f}{matrix\+Transform} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&cloud, char axis, float theta, float translation, bool centroid)
+\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \hyperlink{class_filter_aa01d2f8aa07ed9168112241f257ca6fc}{median\+Filter} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&cloud)
+\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \hyperlink{class_filter_aa6571b7e1da3fe0e0709f4c6ddca53e0}{moving\+Least\+Squares\+Smooth} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&cloud)
+\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \hyperlink{class_filter_aa0575e5df91c3b38156c19601c955ec6}{moving\+Least\+Squares\+Upsample} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&cloud)
+\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \hyperlink{class_filter_a29e76ae322042543a997e48f92cb36c9}{apply\+Filters} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&cloud, float min\+\_\+val, float max\+\_\+val, float leaf\+\_\+size, float radius, int neighbors)
+\item 
+pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \hyperlink{class_filter_ac2788ae9e8a4021c6a96fea5f8a8c48a}{bilateral\+Filter} (const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&cloud)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A filter class which holds many useful filters 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_filter_a29e76ae322042543a997e48f92cb36c9}{}\label{class_filter_a29e76ae322042543a997e48f92cb36c9} 
+\index{Filter@{Filter}!apply\+Filters@{apply\+Filters}}
+\index{apply\+Filters@{apply\+Filters}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{apply\+Filters()}{applyFilters()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr Filter\+::apply\+Filters (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{cloud,  }\item[{float}]{min\+\_\+val,  }\item[{float}]{max\+\_\+val,  }\item[{float}]{leaf\+\_\+size,  }\item[{float}]{radius,  }\item[{int}]{neighbors }\end{DoxyParamCaption})}
+
+Apply the selected filters to the point cloud. Modify as required. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cloud} & input point cloud \\
+\hline
+\mbox{\tt in}  & {\em min\+\_\+val} & minimum value to apply the filter \\
+\hline
+\mbox{\tt in}  & {\em max\+\_\+val} & maximum value to apply the filter \\
+\hline
+\mbox{\tt in}  & {\em leaf\+\_\+size} & the size of leaf \\
+\hline
+\mbox{\tt in}  & {\em radius} & radius in meters \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_filter_ac2788ae9e8a4021c6a96fea5f8a8c48a}{}\label{class_filter_ac2788ae9e8a4021c6a96fea5f8a8c48a} 
+\index{Filter@{Filter}!bilateral\+Filter@{bilateral\+Filter}}
+\index{bilateral\+Filter@{bilateral\+Filter}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{bilateral\+Filter()}{bilateralFilter()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr Filter\+::bilateral\+Filter (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{cloud }\end{DoxyParamCaption})}
+
+Apply bilateral filter to the point cloud. It smoothes the point cloud while preserving edges. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cloud} & input point cloud \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_filter_aee0b09a09d224bd602892fcbf372d32f}{}\label{class_filter_aee0b09a09d224bd602892fcbf372d32f} 
+\index{Filter@{Filter}!matrix\+Transform@{matrix\+Transform}}
+\index{matrix\+Transform@{matrix\+Transform}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{matrix\+Transform()}{matrixTransform()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr Filter\+::matrix\+Transform (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{cloud,  }\item[{char}]{axis,  }\item[{float}]{theta,  }\item[{float}]{translation,  }\item[{bool}]{centroid }\end{DoxyParamCaption})}
+
+Apply Eigen Affine3D Matrix transformation to the point cloud. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cloud} & input point cloud \\
+\hline
+\mbox{\tt in}  & {\em axis} & the axis to rotate the cloud \\
+\hline
+\mbox{\tt in}  & {\em theta} & the angle in radians \\
+\hline
+\mbox{\tt in}  & {\em translation} & apply translation if needed, otherwise pass zero \\
+\hline
+\mbox{\tt in}  & {\em centroid} & boolean value where if true\+: rotate around centroid if false\+: rotate around origin \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_filter_aa01d2f8aa07ed9168112241f257ca6fc}{}\label{class_filter_aa01d2f8aa07ed9168112241f257ca6fc} 
+\index{Filter@{Filter}!median\+Filter@{median\+Filter}}
+\index{median\+Filter@{median\+Filter}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{median\+Filter()}{medianFilter()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr Filter\+::median\+Filter (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{cloud }\end{DoxyParamCaption})}
+
+Apply Median \hyperlink{class_filter}{Filter} to the point cloud 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cloud} & input point cloud \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_filter_aa6571b7e1da3fe0e0709f4c6ddca53e0}{}\label{class_filter_aa6571b7e1da3fe0e0709f4c6ddca53e0} 
+\index{Filter@{Filter}!moving\+Least\+Squares\+Smooth@{moving\+Least\+Squares\+Smooth}}
+\index{moving\+Least\+Squares\+Smooth@{moving\+Least\+Squares\+Smooth}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{moving\+Least\+Squares\+Smooth()}{movingLeastSquaresSmooth()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr Filter\+::moving\+Least\+Squares\+Smooth (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{cloud }\end{DoxyParamCaption})}
+
+Smooth Surface Normals using moving least squares algorithm. Returns a pointer to surface normals 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cloud} & input point cloud \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_filter_aa0575e5df91c3b38156c19601c955ec6}{}\label{class_filter_aa0575e5df91c3b38156c19601c955ec6} 
+\index{Filter@{Filter}!moving\+Least\+Squares\+Upsample@{moving\+Least\+Squares\+Upsample}}
+\index{moving\+Least\+Squares\+Upsample@{moving\+Least\+Squares\+Upsample}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{moving\+Least\+Squares\+Upsample()}{movingLeastSquaresUpsample()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr Filter\+::moving\+Least\+Squares\+Upsample (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{cloud }\end{DoxyParamCaption})}
+
+Upsample the point cloud using least squares algorithm. Make sure to apply voxel grid filter first if the cloud is large. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cloud} & input point cloud \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_filter_a603911357de3e32f0c814c9a9689d406}{}\label{class_filter_a603911357de3e32f0c814c9a9689d406} 
+\index{Filter@{Filter}!pass\+Through@{pass\+Through}}
+\index{pass\+Through@{pass\+Through}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{pass\+Through()}{passThrough()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr Filter\+::pass\+Through (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{cloud,  }\item[{float}]{min\+\_\+val,  }\item[{float}]{max\+\_\+val }\end{DoxyParamCaption})}
+
+Apply passthrough filter to get rid of unnecessary Z values. (background removal) Even background removal is not necessary, apply the min and max values as zero to remove blank points generated from libfreenect drivers. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cloud} & input point cloud \\
+\hline
+\mbox{\tt in}  & {\em min\+\_\+val} & minimum value to apply the filter \\
+\hline
+\mbox{\tt in}  & {\em max\+\_\+val} & maximum value to apply the filter \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_filter_a9137377eaf1376a85a48d30b9caa7c7e}{}\label{class_filter_a9137377eaf1376a85a48d30b9caa7c7e} 
+\index{Filter@{Filter}!radius\+Outline\+Removal@{radius\+Outline\+Removal}}
+\index{radius\+Outline\+Removal@{radius\+Outline\+Removal}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{radius\+Outline\+Removal()}{radiusOutlineRemoval()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr Filter\+::radius\+Outline\+Removal (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{cloud,  }\item[{float}]{radius,  }\item[{int}]{neighbors }\end{DoxyParamCaption})}
+
+The user specifies a number of neighbors which every indice must have within a specified radius to remain in the Point\+Cloud. For example if 1 neighbor is specified, only the yellow point will be removed from the Point\+Cloud. If 2 neighbors are specified then both the yellow and green points will be removed from the Point\+Cloud. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cloud} & input point cloud \\
+\hline
+\mbox{\tt in}  & {\em radius} & radius in meter \\
+\hline
+\mbox{\tt in}  & {\em neighbors} & number of neighbors required \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_filter_a1cab4817dc8a590cc64e11b1e9d24d0b}{}\label{class_filter_a1cab4817dc8a590cc64e11b1e9d24d0b} 
+\index{Filter@{Filter}!remove\+Na\+N\+Normals@{remove\+Na\+N\+Normals}}
+\index{remove\+Na\+N\+Normals@{remove\+Na\+N\+Normals}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{remove\+Na\+N\+Normals()}{removeNaNNormals()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr Filter\+::remove\+Na\+N\+Normals (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+Normal $>$\+::Ptr \&}]{cloud }\end{DoxyParamCaption})}
+
+Remove NaN values from surface normals 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cloud} & input point cloud \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_filter_aeb13a40d687d3ceec3c01510b49855ac}{}\label{class_filter_aeb13a40d687d3ceec3c01510b49855ac} 
+\index{Filter@{Filter}!remove\+Na\+N\+Points@{remove\+Na\+N\+Points}}
+\index{remove\+Na\+N\+Points@{remove\+Na\+N\+Points}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{remove\+Na\+N\+Points()}{removeNaNPoints()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr Filter\+::remove\+Na\+N\+Points (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{cloud }\end{DoxyParamCaption})}
+
+Remove NaN values generated by pcl algorithms. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em points} & input point cloud \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_filter_ad73a60fc35775b86e962f7dcbfc1ef72}{}\label{class_filter_ad73a60fc35775b86e962f7dcbfc1ef72} 
+\index{Filter@{Filter}!statistical\+Outlier\+Removal@{statistical\+Outlier\+Removal}}
+\index{statistical\+Outlier\+Removal@{statistical\+Outlier\+Removal}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{statistical\+Outlier\+Removal()}{statisticalOutlierRemoval()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr Filter\+::statistical\+Outlier\+Removal (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{input,  }\item[{float}]{mean,  }\item[{float}]{std\+\_\+dev }\end{DoxyParamCaption})}
+
+remove noisy measurements, e.\+g. outliers, from a point cloud dataset using statistical analysis techniques. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cloud} & input point cloud \\
+\hline
+\mbox{\tt in}  & {\em mean} & the number of neighbors to analyze for each point \\
+\hline
+\mbox{\tt in}  & {\em std\+\_\+dev} & the standard deviation multiplier \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_filter_a155048b6fa5dc91ad788250657a54df4}{}\label{class_filter_a155048b6fa5dc91ad788250657a54df4} 
+\index{Filter@{Filter}!voxel\+Grid@{voxel\+Grid}}
+\index{voxel\+Grid@{voxel\+Grid}!Filter@{Filter}}
+\subsubsection{\texorpdfstring{voxel\+Grid()}{voxelGrid()}}
+{\footnotesize\ttfamily pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr Filter\+::voxel\+Grid (\begin{DoxyParamCaption}\item[{const pcl\+::\+Point\+Cloud$<$ pcl\+::\+Point\+X\+Y\+Z\+R\+GB $>$\+::Ptr \&}]{cloud,  }\item[{float}]{leaf\+\_\+size }\end{DoxyParamCaption})}
+
+Apply Voxel Grid filter to downsample data without losing necessary information 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em cloud} & input point cloud \\
+\hline
+\mbox{\tt in}  & {\em leaf\+\_\+size} & the size of leaf \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/serhat/\+Work/\+Kinect/\+Raspi\+Kinect/src/filter.\+h\item 
+/home/serhat/\+Work/\+Kinect/\+Raspi\+Kinect/src/filter.\+cpp\end{DoxyCompactItemize}

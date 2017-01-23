@@ -10,15 +10,49 @@
 #include <string>
 #include <vector>
 
+/**
+* This class contains the functions to access the kinects
+* using Raspberry Pi
+*/
 class RaspberryCon {
 public:
+    //
+    // default constructor
+    //
     RaspberryCon() = default;
+
+    /**
+    * Initialize the connection parameters.
+    * @param[in] user hostname of rasperry pi
+    * @param[in] password password of raspberry pi
+    * @param[in] address assigned IP address of raspberry pi
+    */
     void init(std::string user, std::string address,
-              std::string password); // initialize connection parameters
-    int connect();                   // connect to raspberry pi
+              std::string password); 
+
+    /**
+    * Connect to raspberry pi
+    */
+    int connect();
+
+    /**
+    * Run the kinect connected to raspberry pi. Make sure the
+    * names of depth and rgb files are unique to each Pi.
+    * @param[in] depthfile name of the acquired depth data
+    * @param[in] rgbfile name of the acquired rgb data
+    */
     int runKinect(std::string depthfile,
-                  std::string rgbfile); // run the kinect to get specified data
-    int getData();                      // read data to localhost
+                  std::string rgbfile); 
+    /**
+    * Read data to localhost. The name of the data is the same
+    * that is selected in runKinect() function
+    */
+    int getData();
+
+    /**
+    * Disconnect from Raspberry Pi. Frees the memory reserved for
+    * SSH session.
+    */
     void disconnect();
 
 private:

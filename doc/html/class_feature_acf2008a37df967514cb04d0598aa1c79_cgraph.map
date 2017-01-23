@@ -1,0 +1,5 @@
+<map id="Feature::applyFeatures" name="Feature::applyFeatures">
+<area shape="rect" id="node2" href="$class_feature.html#a448116b76768ad35cdda20deee99d0d1" title="Feature::getSiftKeypoints" alt="" coords="218,5,389,32"/>
+<area shape="rect" id="node3" href="$class_feature.html#a89423b19d0d8c4ed67b4b625ddf5422f" title="Feature::getLocalDescriptor" alt="" coords="212,56,395,83"/>
+<area shape="rect" id="node4" href="$class_feature.html#ab2180a5c65923e5334204be9bf0fbd74" title="Feature::getGlobalDescriptor" alt="" coords="209,107,397,133"/>
+</map>

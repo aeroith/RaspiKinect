@@ -1,0 +1,40 @@
+\hypertarget{class_mutex}{}\section{Mutex Class Reference}
+\label{class_mutex}\index{Mutex@{Mutex}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mutex_a593423d868daf926c7b0d63a833ae29a}{Mutex} ()
+\item 
+void \hyperlink{class_mutex_ad91be808bf0a60a16f10b897ec246d3a}{lock} ()
+\item 
+void \hyperlink{class_mutex_a546a5b797ba29959357586aa2b3740a8}{unlock} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_mutex_a593423d868daf926c7b0d63a833ae29a}{}\label{class_mutex_a593423d868daf926c7b0d63a833ae29a} 
+\index{Mutex@{Mutex}!Mutex@{Mutex}}
+\index{Mutex@{Mutex}!Mutex@{Mutex}}
+\subsubsection{\texorpdfstring{Mutex()}{Mutex()}}
+{\footnotesize\ttfamily Mutex\+::\+Mutex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default \hyperlink{class_mutex}{Mutex} Constructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_mutex_ad91be808bf0a60a16f10b897ec246d3a}{}\label{class_mutex_ad91be808bf0a60a16f10b897ec246d3a} 
+\index{Mutex@{Mutex}!lock@{lock}}
+\index{lock@{lock}!Mutex@{Mutex}}
+\subsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily void Mutex\+::lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+If the mutex isn\textquotesingle{}t currently locked by any thread, the calling thread locks it (from this point, and until its member unlock is called, the thread owns the mutex). \hypertarget{class_mutex_a546a5b797ba29959357586aa2b3740a8}{}\label{class_mutex_a546a5b797ba29959357586aa2b3740a8} 
+\index{Mutex@{Mutex}!unlock@{unlock}}
+\index{unlock@{unlock}!Mutex@{Mutex}}
+\subsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily void Mutex\+::unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Unlocks the mutex, releasing ownership over it. If other threads are currently blocked attempting to lock this same mutex, one of them acquires ownership over it and continues its execution. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/serhat/\+Work/\+Kinect/\+Raspi\+Kinect/src/raspi/kinect\+Run.\+cpp\end{DoxyCompactItemize}

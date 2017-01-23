@@ -12,8 +12,16 @@
 #include <vector>
 #include "omp.h"
 
+/**
+* Convert libfreenect data to Point Cloud Library format pcd
+*/
 template <typename PointT> class Freenect2Pcl {
 public:
+/**
+* Constructor of Freenect2Pcl object
+* @param[in] depthfile name of the depth file
+* @param[in] rgbfile name of the rgbfile
+*/
     Freenect2Pcl(std::string depthfile, std::string rgbfile)
         : _depthfile(depthfile), _rgbfile(rgbfile) {
         {
@@ -27,9 +35,18 @@ public:
             ia &_depth;
         }
     }
+/**
+* Default Destructor
+*/
 
     ~Freenect2Pcl() {}
 
+/**
+* Template for point cloud conversion. Use this function to return a
+* pcd formatted point cloud.
+* @param[in] distance maximum distance to get from depth data
+* @param[in] colored boolean value to apply rgb data or not
+*/
     typename pcl::PointCloud<PointT>::Ptr getPointCloud(int distance,
                                                         bool colored) {
         std::cerr << "Reading Point Cloud Data... ";

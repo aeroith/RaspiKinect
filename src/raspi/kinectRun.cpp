@@ -42,8 +42,23 @@
 
 class Mutex {
 public:
+/**
+* Default Mutex Constructor
+*/
   Mutex() { pthread_mutex_init(&m_mutex, NULL); }
+/**
+* If the mutex isn't currently locked by any thread, 
+* the calling thread locks it (from this point, and
+* until its member unlock is called, the thread owns the mutex).
+*/
   void lock() { pthread_mutex_lock(&m_mutex); }
+
+/**
+* Unlocks the mutex, releasing ownership over it.
+* If other threads are currently blocked attempting
+* to lock this same mutex, one of them acquires ownership
+* over it and continues its execution.
+*/
   void unlock() { pthread_mutex_unlock(&m_mutex); }
 
 private:
@@ -60,6 +75,9 @@ public:
   bool m_new_rgb_frame;
   bool m_new_depth_frame;
 
+/**
+* Halve the integer depth buffer
+*/
   uint16_t getDepthBufferSize16() { return getDepthBufferSize() / 2; }
 
   MyFreenectDevice(freenect_context *_ctx, int _index)
@@ -74,7 +92,10 @@ public:
       m_gamma[i] = v * 6 * 256;
     }
   }
-  // Do not call directly even in child
+/**
+* Pass this as an argument to getRGB.
+* Do not call directly even in child.
+*/
   void VideoCallback(void *_rgb, uint32_t timestamp) {
     // std::cout << "RGB callback" << std::endl;
     m_rgb_mutex.lock();
@@ -83,7 +104,10 @@ public:
     m_new_rgb_frame = true;
     m_rgb_mutex.unlock();
   };
-  // Do not call directly even in child
+/**
+* Pass this as an argument to getRGB.
+* Do not call directly even in child.
+*/
   void DepthCallback(void *_depth, uint32_t timestamp) {
     m_depth_mutex.lock();
     uint16_t *depth = static_cast<uint16_t *>(_depth);
@@ -91,6 +115,11 @@ public:
     m_new_depth_frame = true;
     m_depth_mutex.unlock();
   }
+
+/**
+* Return an RGB vector from the buffer. Returns true if succeeds.
+* @param[out] buffer an RGB buffer as a std::vector type
+*/
   bool getRGB(std::vector<uint8_t> &buffer) {
     m_rgb_mutex.lock();
     if (m_new_rgb_frame) {
@@ -104,6 +133,10 @@ public:
     }
   }
 
+/**
+* Return a depth vector from the buffer. Returns true if succeeds.
+* @param[out] buffer a depth buffer as a std::vector type
+*/
   bool getDepth(std::vector<uint16_t> &buffer) {
     m_depth_mutex.lock();
     if (m_new_depth_frame) {
@@ -127,6 +160,12 @@ int got_frames(0), window(0);
 int g_argc;
 char **g_argv;
 
+/**
+* Get RGB and depth vectors using the Kinect and serialize
+* the data.
+* @param[out] depthfile serialized depth file name
+* @param[out] rgbfile serialized rgb file name
+*/
 void KinectStream(std::string depthfile, std::string rgbfile) {
   static std::vector<uint16_t> depth(640 * 480 * 4);
   static std::vector<uint8_t> rgb(640 * 480 * 4);
@@ -154,9 +193,14 @@ void KinectStream(std::string depthfile, std::string rgbfile) {
 
   got_frames = 0;
 }
+
+/**
+* print warning message if no arguments provided
+*/
 void usage() {
   std::cout << "Usage: ./kinectRun [depthfile] [rgbfile]" << std::endl;
 }
+
 int main(int argc, char **argv) {
   if (argc != 3) {
     usage();
@@ -167,6 +211,7 @@ int main(int argc, char **argv) {
   device->setDepthFormat(FREENECT_DEPTH_REGISTERED);
   device->setVideoFormat(requested_format);
   device->setTiltDegrees(freenect_angle);
+  device->setLed(LED_RED);
   device->startDepth();
   device->startVideo();
   std::string depthfile(argv[1]);

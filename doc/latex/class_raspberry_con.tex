@@ -1,0 +1,77 @@
+\hypertarget{class_raspberry_con}{}\section{Raspberry\+Con Class Reference}
+\label{class_raspberry_con}\index{Raspberry\+Con@{Raspberry\+Con}}
+
+
+{\ttfamily \#include $<$raspiconnect.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_raspberry_con_a9a0d56ffbc364d070e6fac16be2e2f66}{init} (std\+::string user, std\+::string address, std\+::string password)
+\item 
+int \hyperlink{class_raspberry_con_a8c8c42dae300b99029c94a88d3adcd6a}{connect} ()
+\item 
+int \hyperlink{class_raspberry_con_ae7e0a6504fb35362657bc3b01901e790}{run\+Kinect} (std\+::string depthfile, std\+::string rgbfile)
+\item 
+int \hyperlink{class_raspberry_con_aec1905f70aff683a3ac512511d146fae}{get\+Data} ()
+\item 
+void \hyperlink{class_raspberry_con_a7d2cd7557ee0dbadd8dc5a02f60a636e}{disconnect} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class contains the functions to access the kinects using Raspberry Pi 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_raspberry_con_a8c8c42dae300b99029c94a88d3adcd6a}{}\label{class_raspberry_con_a8c8c42dae300b99029c94a88d3adcd6a} 
+\index{Raspberry\+Con@{Raspberry\+Con}!connect@{connect}}
+\index{connect@{connect}!Raspberry\+Con@{Raspberry\+Con}}
+\subsubsection{\texorpdfstring{connect()}{connect()}}
+{\footnotesize\ttfamily int Raspberry\+Con\+::connect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Connect to raspberry pi \hypertarget{class_raspberry_con_a7d2cd7557ee0dbadd8dc5a02f60a636e}{}\label{class_raspberry_con_a7d2cd7557ee0dbadd8dc5a02f60a636e} 
+\index{Raspberry\+Con@{Raspberry\+Con}!disconnect@{disconnect}}
+\index{disconnect@{disconnect}!Raspberry\+Con@{Raspberry\+Con}}
+\subsubsection{\texorpdfstring{disconnect()}{disconnect()}}
+{\footnotesize\ttfamily void Raspberry\+Con\+::disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Disconnect from Raspberry Pi. Frees the memory reserved for S\+SH session. \hypertarget{class_raspberry_con_aec1905f70aff683a3ac512511d146fae}{}\label{class_raspberry_con_aec1905f70aff683a3ac512511d146fae} 
+\index{Raspberry\+Con@{Raspberry\+Con}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Raspberry\+Con@{Raspberry\+Con}}
+\subsubsection{\texorpdfstring{get\+Data()}{getData()}}
+{\footnotesize\ttfamily int Raspberry\+Con\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Read data to localhost. The name of the data is the same that is selected in \hyperlink{class_raspberry_con_ae7e0a6504fb35362657bc3b01901e790}{run\+Kinect()} function \hypertarget{class_raspberry_con_a9a0d56ffbc364d070e6fac16be2e2f66}{}\label{class_raspberry_con_a9a0d56ffbc364d070e6fac16be2e2f66} 
+\index{Raspberry\+Con@{Raspberry\+Con}!init@{init}}
+\index{init@{init}!Raspberry\+Con@{Raspberry\+Con}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Raspberry\+Con\+::init (\begin{DoxyParamCaption}\item[{std\+::string}]{user,  }\item[{std\+::string}]{address,  }\item[{std\+::string}]{password }\end{DoxyParamCaption})}
+
+Initialize the connection parameters. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em user} & hostname of rasperry pi \\
+\hline
+\mbox{\tt in}  & {\em password} & password of raspberry pi \\
+\hline
+\mbox{\tt in}  & {\em address} & assigned IP address of raspberry pi \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_raspberry_con_ae7e0a6504fb35362657bc3b01901e790}{}\label{class_raspberry_con_ae7e0a6504fb35362657bc3b01901e790} 
+\index{Raspberry\+Con@{Raspberry\+Con}!run\+Kinect@{run\+Kinect}}
+\index{run\+Kinect@{run\+Kinect}!Raspberry\+Con@{Raspberry\+Con}}
+\subsubsection{\texorpdfstring{run\+Kinect()}{runKinect()}}
+{\footnotesize\ttfamily int Raspberry\+Con\+::run\+Kinect (\begin{DoxyParamCaption}\item[{std\+::string}]{depthfile = {\ttfamily \char`\"{}depth\char`\"{}},  }\item[{std\+::string}]{rgbfile = {\ttfamily \char`\"{}rgb\char`\"{}} }\end{DoxyParamCaption})}
+
+Run the kinect connected to raspberry pi. Make sure the names of depth and rgb files are unique to each Pi. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em depthfile} & name of the acquired depth data \\
+\hline
+\mbox{\tt in}  & {\em rgbfile} & name of the acquired rgb data \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/serhat/\+Work/\+Kinect/\+Raspi\+Kinect/src/raspiconnect.\+h\item 
+/home/serhat/\+Work/\+Kinect/\+Raspi\+Kinect/src/raspiconnect.\+cpp\end{DoxyCompactItemize}

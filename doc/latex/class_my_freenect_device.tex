@@ -1,0 +1,96 @@
+\hypertarget{class_my_freenect_device}{}\section{My\+Freenect\+Device Class Reference}
+\label{class_my_freenect_device}\index{My\+Freenect\+Device@{My\+Freenect\+Device}}
+Inheritance diagram for My\+Freenect\+Device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_my_freenect_device}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \hyperlink{class_my_freenect_device_ad6393488b43e6aa249c01778c8355fdf}{get\+Depth\+Buffer\+Size16} ()
+\item 
+\hypertarget{class_my_freenect_device_aac1e6d4b32dd78faa4e8183542275f67}{}\label{class_my_freenect_device_aac1e6d4b32dd78faa4e8183542275f67} 
+{\bfseries My\+Freenect\+Device} (freenect\+\_\+context $\ast$\+\_\+ctx, int \+\_\+index)
+\item 
+void \hyperlink{class_my_freenect_device_adbe3befb3e1548044b747b25a2adc126}{Video\+Callback} (void $\ast$\+\_\+rgb, uint32\+\_\+t timestamp)
+\item 
+void \hyperlink{class_my_freenect_device_a8f2e6948134273dcc72d38d24acd05e3}{Depth\+Callback} (void $\ast$\+\_\+depth, uint32\+\_\+t timestamp)
+\item 
+bool \hyperlink{class_my_freenect_device_afead2e01130913c50376e3439036aed8}{get\+R\+GB} (std\+::vector$<$ uint8\+\_\+t $>$ \&buffer)
+\item 
+bool \hyperlink{class_my_freenect_device_a657260af4e8e86746de4e33ce14352b7}{get\+Depth} (std\+::vector$<$ uint16\+\_\+t $>$ \&buffer)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_my_freenect_device_af3fdd25c87de58b30f6cf2ba7f062d6e}{}\label{class_my_freenect_device_af3fdd25c87de58b30f6cf2ba7f062d6e} 
+std\+::vector$<$ uint16\+\_\+t $>$ {\bfseries m\+\_\+buffer\+\_\+depth}
+\item 
+\hypertarget{class_my_freenect_device_ae9ddeeeac266f391e522d67659abc598}{}\label{class_my_freenect_device_ae9ddeeeac266f391e522d67659abc598} 
+std\+::vector$<$ uint8\+\_\+t $>$ {\bfseries m\+\_\+buffer\+\_\+video}
+\item 
+\hypertarget{class_my_freenect_device_a5be6da41779149d936cb2d64f9906439}{}\label{class_my_freenect_device_a5be6da41779149d936cb2d64f9906439} 
+std\+::vector$<$ uint16\+\_\+t $>$ {\bfseries m\+\_\+gamma}
+\item 
+\hypertarget{class_my_freenect_device_a71e349e165b5e2df1690ab3383822ec2}{}\label{class_my_freenect_device_a71e349e165b5e2df1690ab3383822ec2} 
+\hyperlink{class_mutex}{Mutex} {\bfseries m\+\_\+rgb\+\_\+mutex}
+\item 
+\hypertarget{class_my_freenect_device_a032d4f875dcfb8732edfbbc8755c5559}{}\label{class_my_freenect_device_a032d4f875dcfb8732edfbbc8755c5559} 
+\hyperlink{class_mutex}{Mutex} {\bfseries m\+\_\+depth\+\_\+mutex}
+\item 
+\hypertarget{class_my_freenect_device_ad2901a2b40db6db0570a0b74e52f668a}{}\label{class_my_freenect_device_ad2901a2b40db6db0570a0b74e52f668a} 
+bool {\bfseries m\+\_\+new\+\_\+rgb\+\_\+frame}
+\item 
+\hypertarget{class_my_freenect_device_adfd5f122a98faec3a04b6832bb2e5df9}{}\label{class_my_freenect_device_adfd5f122a98faec3a04b6832bb2e5df9} 
+bool {\bfseries m\+\_\+new\+\_\+depth\+\_\+frame}
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_my_freenect_device_a8f2e6948134273dcc72d38d24acd05e3}{}\label{class_my_freenect_device_a8f2e6948134273dcc72d38d24acd05e3} 
+\index{My\+Freenect\+Device@{My\+Freenect\+Device}!Depth\+Callback@{Depth\+Callback}}
+\index{Depth\+Callback@{Depth\+Callback}!My\+Freenect\+Device@{My\+Freenect\+Device}}
+\subsubsection{\texorpdfstring{Depth\+Callback()}{DepthCallback()}}
+{\footnotesize\ttfamily void My\+Freenect\+Device\+::\+Depth\+Callback (\begin{DoxyParamCaption}\item[{void $\ast$}]{\+\_\+depth,  }\item[{uint32\+\_\+t}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pass this as an argument to get\+R\+GB. Do not call directly even in child. \hypertarget{class_my_freenect_device_a657260af4e8e86746de4e33ce14352b7}{}\label{class_my_freenect_device_a657260af4e8e86746de4e33ce14352b7} 
+\index{My\+Freenect\+Device@{My\+Freenect\+Device}!get\+Depth@{get\+Depth}}
+\index{get\+Depth@{get\+Depth}!My\+Freenect\+Device@{My\+Freenect\+Device}}
+\subsubsection{\texorpdfstring{get\+Depth()}{getDepth()}}
+{\footnotesize\ttfamily bool My\+Freenect\+Device\+::get\+Depth (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint16\+\_\+t $>$ \&}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return a depth vector from the buffer. Returns true if succeeds. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em buffer} & a depth buffer as a std\+::vector type \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_freenect_device_ad6393488b43e6aa249c01778c8355fdf}{}\label{class_my_freenect_device_ad6393488b43e6aa249c01778c8355fdf} 
+\index{My\+Freenect\+Device@{My\+Freenect\+Device}!get\+Depth\+Buffer\+Size16@{get\+Depth\+Buffer\+Size16}}
+\index{get\+Depth\+Buffer\+Size16@{get\+Depth\+Buffer\+Size16}!My\+Freenect\+Device@{My\+Freenect\+Device}}
+\subsubsection{\texorpdfstring{get\+Depth\+Buffer\+Size16()}{getDepthBufferSize16()}}
+{\footnotesize\ttfamily uint16\+\_\+t My\+Freenect\+Device\+::get\+Depth\+Buffer\+Size16 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Halve the integer depth buffer \hypertarget{class_my_freenect_device_afead2e01130913c50376e3439036aed8}{}\label{class_my_freenect_device_afead2e01130913c50376e3439036aed8} 
+\index{My\+Freenect\+Device@{My\+Freenect\+Device}!get\+R\+GB@{get\+R\+GB}}
+\index{get\+R\+GB@{get\+R\+GB}!My\+Freenect\+Device@{My\+Freenect\+Device}}
+\subsubsection{\texorpdfstring{get\+R\+G\+B()}{getRGB()}}
+{\footnotesize\ttfamily bool My\+Freenect\+Device\+::get\+R\+GB (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{buffer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Return an R\+GB vector from the buffer. Returns true if succeeds. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em buffer} & an R\+GB buffer as a std\+::vector type \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_my_freenect_device_adbe3befb3e1548044b747b25a2adc126}{}\label{class_my_freenect_device_adbe3befb3e1548044b747b25a2adc126} 
+\index{My\+Freenect\+Device@{My\+Freenect\+Device}!Video\+Callback@{Video\+Callback}}
+\index{Video\+Callback@{Video\+Callback}!My\+Freenect\+Device@{My\+Freenect\+Device}}
+\subsubsection{\texorpdfstring{Video\+Callback()}{VideoCallback()}}
+{\footnotesize\ttfamily void My\+Freenect\+Device\+::\+Video\+Callback (\begin{DoxyParamCaption}\item[{void $\ast$}]{\+\_\+rgb,  }\item[{uint32\+\_\+t}]{timestamp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Pass this as an argument to get\+R\+GB. Do not call directly even in child. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/serhat/\+Work/\+Kinect/\+Raspi\+Kinect/src/raspi/kinect\+Run.\+cpp\end{DoxyCompactItemize}
