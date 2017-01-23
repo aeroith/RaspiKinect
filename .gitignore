@@ -1,0 +1,59 @@
+.vscode/
+build/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+kinectRun
+raspikinect
+
+# Data files
+*.pcd
+*.ply
+depth*
+rgb*
+
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Vim incorrect save files
+.swp
+
+# CMakeFiles
+*.bin
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Makefile
+cmake_install.cmake
+install_manifest.txt
+CTestTestfile.cmake
+
+# GNU Global
+GTAGS
+GRTAGS
+GPATH
